@@ -7,17 +7,20 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.List;
+
 public class C7Main {
     private static final Logger log = LogManager.getLogger(C7Main.class);
 
     public static void main(String[] args) {
         SqlSession sqlSession = SqlSessionFactoryUtil.openSqlSession();
         RoleDao roleDao = sqlSession.getMapper(RoleDao.class);
+        List<Role> roleList = roleDao.queryRolesByName("name");
 
-        Role role = new Role();
-        role.setRoleName("johnny");
-        role.setNote("wong");
-        roleDao.insertRole(role);
+    //    Role role = new Role();
+    //    role.setRoleName("johnny");
+    //    role.setNote("wong");
+    //    roleDao.insertRole(role);
 
         log.info("执行成功!");
     }

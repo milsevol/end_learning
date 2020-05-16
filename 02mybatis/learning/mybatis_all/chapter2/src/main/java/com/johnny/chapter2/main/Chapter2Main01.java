@@ -16,8 +16,9 @@ public class Chapter2Main01 {
         try {
             sqlSession = SqlSessionFactoryUtil.openSqlSession();
             RoleMapper roleMapper = sqlSession.getMapper(RoleMapper.class);
-            Role role = new Role("name", "note");
-            roleMapper.insertRole(role);
+           // Role role = new Role("name", "note");
+            roleMapper.getRole(1l);
+           // roleMapper.insertRole(role);
             //roleMapper.deleteRole(1L);
             sqlSession.commit();
         } catch (Exception e) {

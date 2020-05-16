@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface RoleDao {
     List<Role> findRoleByAnnotation(@Param("roleName") String rolename, @Param("note") String note);
+
+    Role queryRoleByName(@Param("roleName") String rolename);
 }

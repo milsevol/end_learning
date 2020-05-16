@@ -29,6 +29,36 @@ Mapper:映射器，mapper负责发送sql去执行，生成的方式也有2种：
 
 - [ ] chapter3 配置
 
+### chapter6 Mybatis
+#### 6.1 技术难点介绍
+##### 6.1.1 反射技术
+##### 6.1.2 jdk动态代理
+缺陷：需要定义接口
+##### 6.1.3 CGLB动态代理
+
+### 6.2 构建SqlSessionFactory过程
+构建步骤分2步：
+1. 解析配置文件，将配置信息存储在Configuraction类中
+2. 使用Configuarction去创建SqlSessionFactory
+
+##### 6.3 SqlSession运行过程
+###### 6.3.1 映射器的动态代理
+使用动态代理对象，最后能调用SqlSesssion对象执行sql
+###### 6.3.2 SqlSession下的四大对象
+Executor:执行器，存在三种执行器
+StataementHandler:
+ParameterHander:
+ResultHandler:对结果集合的封装
+
+
+### chapter7 插件
+#### 7.1 插件接口
+
+
+
+
+
+
 
 
 

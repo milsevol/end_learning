@@ -8,4 +8,8 @@
         INSERT INTO t_role (role_name, note) VALUES (#{role.roleName}, #{role.note})
     </insert>
 
+    <select id="queryRolesByName" resultType="com.johnny.pojo.Role">
+        select tr.id,tr.role_name as roleName,tr.note from t_role tr where tr.role_name = #{roleName}
+    </select>
+
 </mapper>
