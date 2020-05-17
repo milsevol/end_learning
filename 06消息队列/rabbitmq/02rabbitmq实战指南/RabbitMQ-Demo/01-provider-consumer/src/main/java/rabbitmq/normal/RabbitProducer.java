@@ -72,6 +72,7 @@ public class RabbitProducer {
         factory.setPassword(PASSWORD);
         factory.setHost(IP_ADDRESS);
         factory.setPort(PORT);
+        factory.setVirtualHost("admin");
         Connection conn = null;
         try {
             conn = factory.newConnection();
