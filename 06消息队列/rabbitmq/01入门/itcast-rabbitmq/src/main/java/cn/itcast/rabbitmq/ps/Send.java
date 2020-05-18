@@ -14,8 +14,9 @@ public class Send {
         Connection connection = ConnectionUtil.getConnection();
         Channel channel = connection.createChannel();
 
+     //   channel.exchangeDelete(EXCHANGE_NAME);
         // 声明exchange
-        channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
+       channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
 
         // 消息内容
         String message = "Hello World!";
