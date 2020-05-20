@@ -12,10 +12,10 @@ import java.util.concurrent.TimeUnit;
  */
 public class RabbitConsumer {
 
-    private static final String USER_NAME = "guest";
-    private static final String PASSWORD = "guest";
+    private static final String USER_NAME = "u_action";
+    private static final String PASSWORD = "u_action";
     private static final String QUEUE_NAME = "ttl_queue_demo";
-    private static final String IP_ADDRESS = "127.0.0.1";
+    private static final String IP_ADDRESS = "test01.com";
     /**
      * RabbitMQ 服务端默认端口号为 5672
      */

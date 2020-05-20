@@ -12,7 +12,7 @@
       var sock = new SockJS([[@{/marcopolo}]]);
       var stomp = Stomp.over(sock);
 
-      stomp.connect('guest', 'guest', function(frame) {
+      stomp.connect('u_action', 'u_action', function(frame) {
         console.log('*****  Connected  *****');
         stomp.subscribe("/topic/marco", handlePolo);
         sayMarco();

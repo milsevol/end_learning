@@ -27,7 +27,7 @@
       var sock = new SockJS([[@{/spittr}]]);
       var stomp = Stomp.over(sock);
 
-      stomp.connect('guest', 'guest', function(frame) {
+      stomp.connect('u_action', 'u_action', function(frame) {
         console.log('*****  Connected  *****');
         stomp.subscribe("/topic/spittlefeed", handleSpittle);
         stomp.subscribe("/user/queue/notifications", handleNotification);

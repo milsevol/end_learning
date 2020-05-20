@@ -15,7 +15,7 @@ public class Consumer {
     public static void main(String[] args) throws Exception{
         // 配置rabbitmq
         ConnectionFactory connectionFactory = new ConnectionFactory();
-        connectionFactory.setHost("127.0.0.1");
+        connectionFactory.setHost("test01.com");
         connectionFactory.setPort(5672);
         connectionFactory.setVirtualHost("/");
 
