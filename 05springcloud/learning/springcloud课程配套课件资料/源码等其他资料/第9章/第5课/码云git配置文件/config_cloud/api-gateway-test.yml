@@ -1,0 +1,27 @@
+server:
+  port: 9000
+
+#服务的名称
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+#暴露全部的监控信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+#自定义路由映射
+zuul:
+  routes:
+    order-service: /apigateway/order/**
+    product-service: /apigateway/product/**
+  #统一入口为上面的配置，其他入口忽略
+  ignored-patterns: /*-service/**
+  #处理http请求头为空的问题
+  sensitive-headers:
+
