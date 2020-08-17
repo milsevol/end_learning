@@ -19,7 +19,7 @@ spring:
     timeout: 2000
 #zipkin服务所在地址
   zipkin:
-    base-url: http://139.159.177.112:9411/
+    base-url: http://test01.com:9411/
 #配置采样百分比,开发环境可以设置为1，表示全部，生产就用默认
   sleuth:
     sampler:

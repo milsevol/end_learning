@@ -13,4 +13,4 @@ spring:
   application:
     name: product-service
   zipkin:
-    base-url: http://139.159.177.112:9411/
+    base-url: http://test01.com:9411/

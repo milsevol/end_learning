@@ -41,9 +41,9 @@ public class OrderRateLimiterFilter extends ZuulFilter {
         HttpServletRequest request = requestContext.getRequest();
 
         //只对订单接口限流
-        if ("/apigateway/order/api/v1/order/save".equalsIgnoreCase(request.getRequestURI())){
-            return true;
-        }
+//        if ("/apigateway/order/api/v1/order/save".equalsIgnoreCase(request.getRequestURI())){
+//            return true;
+//        }
 
         return false;
     }
